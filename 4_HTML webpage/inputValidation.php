@@ -49,7 +49,7 @@ include_once ("inputValidationFunction.php");
                 $fname = filter_input(INPUT_POST,'fname',FILTER_SANITIZE_STRING);
             }?>
             <?php if(isset($_REQUEST['lname']) && !empty($_REQUEST['lname'])) {
-                //$lname = htmlspecialchars($_REQUEST['lname']);
+             
                 $lname = filter_input(INPUT_POST,'lname',FILTER_SANITIZE_STRING);
             }?>
         </p>
