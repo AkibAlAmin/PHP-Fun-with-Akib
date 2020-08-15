@@ -34,7 +34,6 @@ class ArticleTitleDecorator{
     }
 
     private function timeAgo( $time ) { 
-        //source: https://www.geeksforgeeks.org/how-to-convert-timestamp-to-time-ago-in-php/
         $diff = time() - $time; 
           
         if( $diff < 1 ) {  
