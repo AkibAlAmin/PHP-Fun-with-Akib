@@ -9,7 +9,7 @@ if('delete'==$task){
     $id = filter_input( INPUT_GET, 'id', FILTER_SANITIZE_STRING );
     if($id>0){
         deleteStudent($id);
-        header( 'location: /PHPLearn/8_CRUDProjectUsingFile/index.php?task=report' );
+        header( 'location: /index.php?task=report' );
     }
 }
 if ( 'seed' == $task ) {
@@ -29,7 +29,7 @@ if ( isset( $_POST['submit'] ) ) {
         if ( $fname != '' && $lname != '' && $roll != '' ) {
             $result = updateStudent($id, $fname, $lname, $roll);
             if ( $result ) {
-                header( 'location: /PHPLearn/8_CRUDProjectUsingFile/index.php?task=report' );
+                header( 'location: /index.php?task=report' );
             } else {
                 $error = 1;
             }
@@ -39,7 +39,7 @@ if ( isset( $_POST['submit'] ) ) {
         if ( $fname != '' && $lname != '' && $roll != '' ) {
             $result = addStudent( $fname, $lname, $roll );
             if ( $result ) {
-                header( 'location: /PHPLearn/8_CRUDProjectUsingFile/index.php?task=report' );
+                header( 'location: /index.php?task=report' );
             } else {
                 $error = 1;
             }
@@ -97,7 +97,7 @@ if ( isset( $_POST['submit'] ) ) {
     <?php if ( 'add' == $task ): ?>
         <div class="row">
             <div class="column column-60 column-offset-20">
-                <form action="/PHPLearn/8_CRUDProjectUsingFile/index.php?task=add" method="POST">
+                <form action="/index.php?task=add" method="POST">
                     <label for="fname">First Name</label>
                     <input type="text" name="fname" id="fname" value="<?php echo $fname; ?>">
                     <label for="lname">Last Name</label>
